@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from 'scenes/home';
+import { AddCoin } from 'scenes/addCoin';
 
 import { WHITE, BLUE_1 } from 'styles/colors';
 import { FONT_WEIGHT_SEMIBOLD } from 'styles/typography';
@@ -25,6 +26,11 @@ export const MainNavigator = () => (
         name="home"
         component={Home}
         options={{ title: 'Watchlist' }}
+      />
+      <Stack.Screen
+        name="AddCoin"
+        component={AddCoin}
+        options={{ title: 'Add New Coin' }}
       />
     </Stack.Navigator>
   </NavigationContainer>

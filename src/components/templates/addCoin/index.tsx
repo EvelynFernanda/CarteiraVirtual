@@ -7,9 +7,9 @@ import { EmptyState, EmptyStateType } from 'components/molecules/empry-state';
 import { GREEN_TINT_1 } from 'styles/colors';
 import styles from './styles';
 
-interface HomeTemplateProps {}
+interface AddCoinTemplateProps {}
 
-export const HomeTemplate = ({}: HomeTemplateProps) => {
+export const AddCoinTemplate = ({}: AddCoinTemplateProps) => {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
