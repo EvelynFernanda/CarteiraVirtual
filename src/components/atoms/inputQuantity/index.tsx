@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { Button, Input } from 'react-native-elements';
+import styles from './styles';
 
 export const InputQuantity = () => {
   const [quantity, setQuantity] = useState('');
@@ -24,7 +25,7 @@ export const InputQuantity = () => {
 
   return (
     <View>
-      <Text>Quantity</Text>
+      <Text style={styles.textQuantity}>Quantity</Text>
       <Input
         keyboardType="numeric"
         errorMessage={errorQuantity}
@@ -33,7 +34,9 @@ export const InputQuantity = () => {
           setErrorQuantity('');
         }}
       />
+
       <Button onPress={save}>save</Button>
     </View>
+    //button para testar validação
   );
 };
