@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 import { EmptyState, EmptyStateType } from 'components/molecules/empry-state';
 import { GREEN_TINT_1 } from 'styles/colors';
 import styles from './styles';
-// import stylesC from '../addCoinT/styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from 'react-native-elements';
@@ -71,29 +70,3 @@ export const HomeTemplate = ({}: HomeTemplateProps) => {
   );
 };
 
-// export const renderList = () =>{
-
-//   <View style={{ flexDirection: 'row' }}>
-//         <View style={stylesC.containerLetter}>
-//           { == ['Bitcoin'] && (
-//             <Text style={stylesC.textInitialLetter}>B</Text>
-//           )}
-//           {selectedCurrency == ['Ethereum'] && (
-//             <Text style={stylesC.textInitialLetter}>E</Text>
-//           )}
-//           {selectedCurrency == ['Dogecoin'] && (
-//             <Text style={stylesC.textInitialLetter}>D</Text>
-//           )}
-//         </View>
-//         <View style={stylesC.containerSelect}>
-//           <Text style={[stylesC.textPadrao, { marginLeft: 15 }]}>Coin</Text>
-//           <Picker
-//             selectedValue={selectedCurrency}
-//             onValueChange={itemValue => setSelectedCurrency(itemValue)}>
-//             {coin.map(cn => {
-//               return <Picker.Item key={cn.length} label={cn} value={cn} />;
-//             })}
-//           </Picker>
-//         </View>
-//       </View>
-// }
