@@ -1,18 +1,27 @@
 import { Picker } from '@react-native-picker/picker';
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
+import styles from './styles';
+import { listCoin } from '../../../data/listCoin';
 
 export const Select = () => {
-  const [selectedCoin, setSelectedCoin] = useState();
+  const [coin] = useState([
+    listCoin[0].label,
+    listCoin[1].label,
+    listCoin[2].label,
+  ]);
+  const [selectedCurrency, setSelectedCurrency] = useState([]);
+
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.text}>Coin</Text>
       <Picker
-        selectedValue={selectedCoin}
-        onValueChange={itemValue => setSelectedCoin(itemValue)}>
-        <Picker.Item style={{ color: '#AFAFAF' }} label="Select the coin..." />
-        <Picker.Item label="Bitcoin" value="Bitcoin" />
-        <Picker.Item label="Ethereum" value="Ethereum" />
-        <Picker.Item label="Dogecoin" value="Dogecoin" />
+        style={styles.picker}
+        selectedValue={selectedCurrency}
+        onValueChange={itemValue => setSelectedCurrency(itemValue)}>
+        {coin.map(cn => {
+          return <Picker.Item label={cn} value={cn} />;
+        })}
       </Picker>
     </View>
   );

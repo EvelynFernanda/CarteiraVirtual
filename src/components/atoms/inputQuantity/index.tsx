@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
-import { Button, Input } from 'react-native-elements';
+import { Input, Button } from 'react-native-elements';
 import styles from './styles';
 
 export const InputQuantity = () => {
@@ -17,6 +17,7 @@ export const InputQuantity = () => {
     }
     return !error;
   };
+
   const save = () => {
     if (validate()) {
       console.log('salvou');
@@ -25,7 +26,7 @@ export const InputQuantity = () => {
 
   return (
     <View>
-      <Text style={styles.textQuantity}>Quantity</Text>
+      <Text style={styles.text}>Quantity</Text>
       <Input
         keyboardType="numeric"
         errorMessage={errorQuantity}
@@ -37,6 +38,5 @@ export const InputQuantity = () => {
 
       <Button onPress={save}>save</Button>
     </View>
-    //button para testar validação
   );
 };
