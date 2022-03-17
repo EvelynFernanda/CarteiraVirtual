@@ -6,6 +6,7 @@ import { AddCoin } from 'scenes/addCoin';
 
 import { WHITE, BLUE_1 } from 'styles/colors';
 import { FONT_WEIGHT_SEMIBOLD } from 'styles/typography';
+import { AddCoinT } from 'components/templates/addCoinT';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,11 @@ export const MainNavigator = () => (
       <Stack.Screen
         name="AddCoin"
         component={AddCoin}
+        options={{ title: 'Add New Coin' }}
+      />
+      <Stack.Screen
+        name="AddCoinT"
+        component={AddCoinT}
         options={{ title: 'Add New Coin' }}
       />
     </Stack.Navigator>

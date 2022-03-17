@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  textQuantity: {
-    marginLeft: 15,
+  text: {
+    marginLeft: 5,
+    color: '#000000',
   },
 });

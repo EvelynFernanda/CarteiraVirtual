@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  container: {
-    width: 60,
-    height: 60,
+  containerLetter: {
+    width: 50,
+    height: 50,
     backgroundColor: '#05C9BF',
     borderRadius: 50,
   },
@@ -12,6 +12,6 @@ export default StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     textAlign: 'center',
-    marginTop: 12,
+    marginTop: 8,
   },
 });
